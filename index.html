@@ -5,19 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dhairya Shah | Data Analyst Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <!-- AOS Animation CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
-<body>
+<body >
+ 
+
+  
+
       <!-- Navigation Bar -->
        <header>
   <nav class="navbar">
+   
     <div class="container">
       <h1 class="logo">Dhairya Shah</h1>
       <ul class="nav-links">
+     
+
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="resume dhairya.pdf" target="_blank">Resume</a></li>
+        <!-- Theme Toggle inside Navbar -->
+<div class="theme-toggle">
+  <input type="checkbox" id="switch" />
+  <label for="switch" class="toggle-label">
+    <span class="sun">☀️</span>
+    <span class="moon">🌙</span>
+    <div class="ball"></div>
+  </label>
+</div>
+
       </ul>
     </div>
   </nav></header>
@@ -85,6 +105,11 @@
         <p>I design clean and creative visuals using Canva for presentations and data storytelling.</p>
         <span class="icon">🎨</span>
       </div>
+      <div class="skill-card">
+        <h3>Data Handling</h3>
+        <p> Collecting + Cleaning + Organizing + Analyzing + Securing data.</p>
+        <span class="icon">🎨</span>
+      </div>
     </div>
   </section>
 
@@ -116,7 +141,8 @@
       </div>
       <div class="skill-card">
         <h3>LinkedIn</h3>
-        <p><a href="www.linkedin.com/in/sdhairya2907" target="_blank">dhairya shah</a></p>
+        <p><a href="https://www.linkedin.com/in/sdhairya2907" target="_blank">Dhairya Shah</a></p>
+
         <span class="icon">🔗</span>
       </div>
       <div class="skill-card">
@@ -141,18 +167,30 @@
   <section id="contact-form">
     
     <h2>Send Me a Message</h2>
-    <form class="form-card" action="#" method="POST">
-      <label for="name">Name<span style="color: red;">*</span></label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email<span style="color: red;">*</span></label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5"></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
+    <form action="https://formsubmit.co/your@email.com" method="POST" class="form">
+            <div>
+              <input
+                type="text"
+                placeholder="Name"
+                name="full-name"
+                id="full-name"
+                required
+              />
+            </div>
+            <div>
+              <input
+                type="email"
+                placeholder="Email"
+                name="email"
+                id="email"
+                required
+              />
+            </div>
+            <div>
+              <textarea placeholder="Message" name="message" required></textarea>
+            </div>
+            <button class="form-button">Send</button>
+          </form>
   </section>
 
   <script src="script.js"></script>

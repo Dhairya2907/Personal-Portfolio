@@ -64,7 +64,7 @@ section {
 
  /* Hero Section with Image */
  #hero {
-  background: #000000;
+  
   color: #e0e0e0;
   padding: 80px 20px;
 }
@@ -102,6 +102,7 @@ section {
 .hero-text h2 {
   font-size: 1.4rem;
   margin-top: 10px;
+  color: #ff0000;
 }
 
 .hero-text h1 {
@@ -185,13 +186,13 @@ h2 {
 }
 
 #projects, #contact {
-  background-color: #f8f9fa;
+ 
   padding: 60px 20px;
 }
 
 #projects h2, #contact h2 {
   border-bottom: 2px solid #007bff;
-  color: #000;
+  color: #ff0000;
   margin-bottom: 20px;
 }
 
@@ -234,8 +235,9 @@ h2 {
 }
 /* About Section Styling */
 #about {
-  background-color: #f8f9fa;
-  padding: 60px 20px;
+ 
+    padding: 60px 20px;
+
 }
 
 .about-card {
@@ -254,53 +256,128 @@ h2 {
 
 #about h2 {
   border-bottom: 2px solid #007bff;
-  color: #000;
+  color: #ff0000;
   margin-bottom: 20px;
 }
 #contact-form {
-  background-color: #f8f9fa;
-  padding: 60px 20px;
+  background-color: #ffffff;
+ 
 }
 
 #contact-form h2 {
   border-bottom: 2px solid #007bff;
-  color: #000000;
+  color: #ff0000;
   margin-bottom: 20px;
 }
 
-.form-card {
-  background-color: #000000;
-  border: 2px solid #b388ff;
-  border-radius: 16px;
-  padding: 25px;
-  color: #e0e0e0;
-  max-width: 600px;
-  margin: auto;
+.form {
   display: flex;
+
   flex-direction: column;
-  gap: 15px;
+  align-items: center;
+  gap: 2.4rem;
 }
 
-.form-card input,
-.form-card textarea {
-  padding: 10px;
-  border-radius: px;
-  color: #e0e0e0;
-  font-size: 1rem;
-}
+.form input,
+.form textarea {
+  width: 50rem;
 
-.form-card button {
-  padding: 12px;
-  background-color: #b388ff;
-  color: #ffffff;
-  font-weight: bold;
+  padding: 2.4rem;
   border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+  border-radius: 1rem;
+  background-color: #777;
 }
 
-.form-card button:hover {
-  background-color: #a16cf0;
+input::placeholder,
+textarea::placeholder {
+  color: white;
+  opacity: 0.8;
 }
+
+textarea {
+  height: 20rem;
+  width: auto;
+}
+
+.form-button {
+  width: 100%;
+  max-width: 50rem;
+  padding: 1.2rem 2.4rem;
+  font-size: 1.8rem;
+  color: white;
+  background: #000000f0;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+:root {
+  --bg-color: #0f0f0f;
+  --text-color: #ffffff;
+  --accent-color: #b388ff;
+  --card-bg: #1e1e1e;
+}
+
+:root {
+  --bg-color: #0f0f0f;
+  --text-color: #ffffff;
+  --accent-color: #b388ff;
+  --card-bg: #1e1e1e;
+}
+
+.light-theme {
+  --bg-color: #f9f9f9;
+  --text-color: #ff0000;
+  --accent-color: #7e57c2;
+  --card-bg: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.toggle-label {
+  background: var(--card-bg);
+  border: 2px solid var(--accent-color);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 60px;
+  height: 30px;
+  position: relative;
+  padding: 0 5px;
+}
+
+.toggle-label .ball {
+  background: var(--accent-color);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.3s ease;
+}
+
+#switch {
+  display: none;
+}
+
+#switch:checked + .toggle-label .ball {
+  transform: translateX(30px);
+}
+
+.sun, .moon {
+  font-size: 16px;
+}
+
 

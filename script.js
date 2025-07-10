@@ -43,3 +43,18 @@ document.addEventListener("DOMContentLoaded", () => {
   if (words.length) setTimeout(type, newWordDelay + 250);
 });
 
+const toggleSwitch = document.getElementById('switch');
+
+// Apply saved theme on load
+if (localStorage.getItem("theme") === "light") {
+  document.body.classList.add("light-theme");
+  toggleSwitch.checked = true;
+}
+
+// Toggle theme on click
+toggleSwitch.addEventListener("change", () => {
+  document.body.classList.toggle("light-theme");
+  const theme = document.body.classList.contains("light-theme") ? "light" : "dark";
+  localStorage.setItem("theme", theme);
+});
+
